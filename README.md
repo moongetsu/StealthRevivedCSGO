@@ -1,60 +1,88 @@
-## Stealth Revived ##
+<h1 align="center">
+  <img src="https://images.gamebanana.com/img/ico/sprays/naruto.gif" width="64" alt="Stealth Revived"/>
+  <br />
+  Stealth Revived
+</h1>
+<p align="center">
+  <b>Powerful SourceMod plugin for <span style="color:#19a974;">stealthy</span> spectating and admin tools in CS:GO servers.</b><br>
+  <i>Catching cheaters has never been easier or cleaner.</i>
+</p>
 
-### What is this? ###
-   Stealth Revived is a plugin which aims to help server admins catch cheaters by hiding them when they go into spectator.
+<hr>
 
-### What does the plugin currently do? ###
+## 🕵️ About
 
-    Hides stealthed admins from scoreboard.
-    Hides stealthed admins from status.
-    Blocks cheats with 'Show spectators'
+**Stealth Revived** is a modern SourceMod plugin built for CS:GO, designed to help server admins catch cheaters by allowing them to truly vanish when spectating players.
 
+---
 
-### How does it work? ###
-Simply join spectator while you have Admin kick flag (Or you can change it using the override 'admin_stealth') and you will vanish, Now you can easily spectate cheaters and they will never know!
+## 🚀 Features
 
-### Does it support games other than CSGO / TF2? ###
-It does partially, but the status rewrite for games other than CSGO and TF2 is not yet supported.
+- **Invisible Admins:** Hide admins in spectator from scoreboard and status.
+- **Bypass "Show Spectators":** Blocks cheats showing who is spectating.
+- **CS:GO Optimized:** All code streamlined for CS:GO, no unused legacy or TF2 code.
+- **Multilingual:** Supports English & Romanian out of the box.
+- **Performance-Focused:** Clean implementation for minimal impact on your server.
 
-### Why did you remove fake disconnect etc? ###
-I will attempt to add these features back later but they have been very problematic, causing issues with radar, event messages showing 'Unconnected' etc.. and I struggled fixing them, Sorry!
-Currently all messages are hidden when you join spectator or a team from being stealthed.
+---
 
-### Requirements (These are optional but recommended for better functionality): ###
+## ⚙️ How Does It Work?
 
-    PTaH (CSGO ONLY) - For the status rewrite.
-    SteamWorks - For more accurate IP and VAC checking.
+1. **Join Spectator:** Switch to spectator with admin flag (kick by default, or customize via `admin_stealth` override).
+2. **Vanishing Act:** Your presence is hidden from scoreboard, status, and "Show spectators" features.
+3. **Spectate & Catch:** Watch potential cheaters without alerting them. All announcement messages are suppressed when entering/leaving teams as stealth.
 
+---
 
-### Installation ###
+## 🛠️ Requirements
 
-    Copy the folder structure to your gameserver and it should work straight away.
-    Install the optional extensions for improved functionality.
-    Configure the override 'admin_stealth' to whatever flag you like.
-    Join spectator and have fun catching cheaters.
+- **[PTaH](https://forums.alliedmods.net/showthread.php?t=264667)** (CS:GO) – for best-in-class status rewriting (falls back to slower command listening if absent).
+- **[SteamWorks](https://forums.alliedmods.net/showthread.php?t=229556)** – for accurate IP/VAC checks (falls back to `hostip`).
 
+<sub>*Both are optional, but highly recommended for full functionality and performance.*</sub>
 
-### ConVars ###
+---
 
-    sm_stealthrevived_status (Should the plugin rewrite status?) [Default 1]
-    sm_stealthrevived_hidecheats (Should the plugin prevent cheats with 'spectator list' working? (This option may cause performance issues on some servers) [Default 1]
+## 📦 Installation
 
+1. Add the files into your CS:GO server.
+2. Install the extensions ([PTaH](https://github.com/komashchenko/PTaH/releases) and [SteamWorks](https://github.com/KyleSanderson/SteamWorks/releases)).
+3. Set up the `admin_stealth` override as desired (`@flag`).
+4. Join spectator and monitor freely & discreetly!
 
-### Notes / Known issues ###
+---
 
-    - The TF2 status rewrite does not yet properly count points (I will get round to this at some point once I have setup a TF2 test server).
-    - TF2 has not been thoroughly tested, but it should work fine other than the above issue.
-    - I will attempt to add back the removed features later.
+## 📝 ConVars
 
+| ConVar                            | Description                                                           | Default |
+|------------------------------------|-----------------------------------------------------------------------|:-------:|
+| `sm_stealthrevived_status`         | Should plugin rewrite status?                                         |   1     |
+| `sm_stealthrevived_hidecheats`     | Prevent 'spectator list' cheats? (may impact performance on some servers) |   1     |
 
-### Credits ###
+---
 
-I would like to thank everyone who has helped made this project possible, I am sorry if I forgot anyone.
+## ✨ What's New in This Fork
 
-    Drixevel Always been around for questions on steam, has more TF2 knowledge than me.
-    komashchenko For PTAH, without this extension rewriting status in CSGO is not possible!
-    Byte Private testing and helping me come up with ShouldTransmit method.
-    Sneak Private testing.
-    Psychonic Help and suggestions over sourcemod IRC.
-    Asherkin Help and suggestions over sourcemod IRC.
-    Necavi For original admin stealth plugin. (https://forums.alliedmods.net/showthread.php?p=1796351)
+- 🧹 Removed TF2 code, game detection, and unused variables.
+- 🌎 Added full translation support (EN/RO).
+- 🚀 Major code and performance improvements.
+- 🏆 CS:GO only, no legacy baggage.
+
+---
+
+## 🤝 Credits
+
+Big thanks to everyone who made this plugin possible!
+- **Drixevel** – Knowledge & support (especially TF2 insights).
+- **komashchenko** – For PTaH; rewriting status in CSGO wouldn't work without you.
+- **Byte** – Private testing & ShouldTransmit method.
+- **Sneak** – Private testing.
+- **Psychonic** & **Asherkin** – Help and suggestions on Sourcemod IRC.
+- **Necavi** – [Original Admin Stealth plugin](https://forums.alliedmods.net/showthread.php?p=1796351).
+
+---
+
+<p align="center">
+  <img src="https://badgen.net/badge/Optimized%20for/CS:GO/green?icon=sourceengine" alt="CSGO Optimized" />
+  <img src="https://badgen.net/badge/Language/SourcePawn/orange" alt="SourcePawn" />
+</p>
