@@ -12,17 +12,7 @@
 
 ## 🕵️ About
 
-**Stealth Revived** is a modern SourceMod plugin built for CS:GO, designed to help server admins catch cheaters by allowing them to truly vanish when spectating players.
-
----
-
-## 🚀 Features
-
-- **Invisible Admins:** Hide admins in spectator from scoreboard and status.
-- **Bypass "Show Spectators":** Blocks cheats showing who is spectating.
-- **CS:GO Optimized:** All code streamlined for CS:GO, no unused legacy or TF2 code.
-- **Multilingual:** Supports English & Romanian out of the box.
-- **Performance-Focused:** Clean implementation for minimal impact on your server.
+**Stealth Revived** is a modern SourcePawn plugin built for CS:GO, designed to help server admins catch cheaters by allowing them to truly vanish when spectating players.
 
 ---
 
@@ -61,18 +51,21 @@
 
 ---
 
-## ✨ What's New in This Fork
+## ✨ What's New in v1.0.1 (Refactor)
 
-- 🧹 Removed TF2 code, game detection, and unused variables.
-- 🌎 Added full translation support (EN/RO).
-- 🚀 Major code and performance improvements.
-- 🏆 CS:GO only, no legacy baggage.
+- 🚀 **Performance Optimization:** Global counter system to skip expensive loops when no admins are in stealth.
+- 🛠️ **Stability Fix:** Resolved compilation errors (Error 147) related to legacy `ptah.inc`.
+- 🧹 **Code Cleanup:** Massive refactor removing legacy macros, TF2 remnants, and inconsistent spacing.
+- 📡 **Better Caching:** Improved detection logic for Server Version, OS, and Public IP.
+- 💎 **Standardized Structure:** Professional code organization for easier maintenance.
 
 ---
 
 ## 🤝 Credits
 
 Big thanks to everyone who made this plugin possible!
+- **SM9()** – Original developer.
+- **moongetsu** – Refactoring, optimizations, and modern features.
 - **Drixevel** – Knowledge & support (especially TF2 insights).
 - **komashchenko** – For PTaH; rewriting status in CSGO wouldn't work without you.
 - **Byte** – Private testing & ShouldTransmit method.
@@ -84,5 +77,6 @@ Big thanks to everyone who made this plugin possible!
 
 <p align="center">
   <img src="https://badgen.net/badge/Optimized%20for/CS:GO/green?icon=sourceengine" alt="CSGO Optimized" />
+  <img src="https://badgen.net/badge/Version/v1.0.1/blue" alt="Version" />
   <img src="https://badgen.net/badge/Language/SourcePawn/orange" alt="SourcePawn" />
 </p>
